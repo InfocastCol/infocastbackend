@@ -69,8 +69,8 @@ namespace infocast.Controllers{
             string correo;
             UUsuario usuario = new UUsuario();
             try{
-                usuario.Entidad = 2;
-                usuario.Ciudad = Vs_entrada["Ciudad"].ToString();
+                usuario.Entidad = int.Parse(Vs_entrada["entidad"].ToString()); ;
+                usuario.Ciudad = Vs_entrada["ciudad"].ToString();
                 UUsuario validarentidad = new LUsuarios().Verificar_entidad_existente(usuario);
                 if (validarentidad!=null){
                     return "En este momento en " + usuario.Ciudad + " YA esta registrada la entidad que presentas";
@@ -87,12 +87,12 @@ namespace infocast.Controllers{
                         usuario.Correo = Vs_entrada["correo"].ToString();
                         usuario.Password = Vs_entrada["contrasenia"].ToString();
                         usuario.Documento = Vs_entrada["documento"].ToString();
-                        // usuario.Entidad = 2;
+                        //usuario.Entidad = int.Parse(Vs_entrada["entidad"].ToString());
                         usuario.Tipo_usuario = 2;
                         usuario.Aprobacion = 0;//0 sin aprobar//1 aprobado// 2 rechazado
                         usuario.Direccion = Vs_entrada["direccion"].ToString();
                         usuario.Telefono = Vs_entrada["telefono"].ToString();
-                      //  usuario.Ciudad = Vs_entrada["Ciudad"].ToString();
+                      //usuario.Ciudad = Vs_entrada["Ciudad"].ToString();
                         new LUsuarios().Registrar_usuario(usuario);
                         return "Registro exitoso";
                     }
@@ -112,7 +112,7 @@ namespace infocast.Controllers{
             UUsuario usuario = new UUsuario();
             try{
                 usuario.Entidad= int.Parse(Vs_entrada["entidad"].ToString());
-                usuario.Ciudad = Vs_entrada["Ciudad"].ToString();
+                usuario.Ciudad = Vs_entrada["ciudad"].ToString();
                 UUsuario validarentidad = new LUsuarios().Verificar_entidad_existente(usuario);
                 if (validarentidad!=null){
                     correo = Vs_entrada["correo"].ToString();
@@ -126,12 +126,12 @@ namespace infocast.Controllers{
                         usuario.Correo = Vs_entrada["correo"].ToString();
                         usuario.Password = Vs_entrada["contrasenia"].ToString();
                         usuario.Documento = Vs_entrada["documento"].ToString();
-                        //  usuario.Entidad = int.Parse(Vs_entrada["entidad"].ToString()); 
+                        //usuario.Entidad = int.Parse(Vs_entrada["entidad"].ToString()); 
                         usuario.Tipo_usuario = 3;
                         usuario.Aprobacion = 0;//0 sin aprobar//1 aprobado// 2 rechazado
                         usuario.Direccion = Vs_entrada["direccion"].ToString();
                         usuario.Telefono = Vs_entrada["telefono"].ToString();
-                        // usuario.Ciudad = Vs_entrada["Ciudad"].ToString();
+                        //usuario.Ciudad = Vs_entrada["ciudad"].ToString();
                         new LUsuarios().Registrar_usuario(usuario);
                         return "Registro exitoso";
                     }

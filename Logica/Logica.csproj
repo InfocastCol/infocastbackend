@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="LCerrarSesion.cs" />
     <Compile Include="LComunicacion.cs" />
     <Compile Include="LEmergencia.cs" />
     <Compile Include="LEntidades.cs" />

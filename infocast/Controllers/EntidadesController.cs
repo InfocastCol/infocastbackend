@@ -15,7 +15,39 @@ namespace infocast.Controllers{
     [EnableCors("*", "*", "*")]
     [Route("api/[controller]")]
     public class EntidadesController : ApiController{
-        
+
+        [Authorize]
+        [HttpGet]
+        [Route("api/Usuarios/GetObtener_Emergencias")]
+        public List<UEmergencia> Obtener_Emergencias()
+        {
+            return new LEmergencia().Obtener_todas_emergencias();
+        }
+        //
+
+        [Authorize]
+        [HttpGet]
+        [Route("api/Usuarios/GetObtener_Emergencias_SinAtender")]
+        public List<UEmergencia> Obtener_Emergencia_SinAtender()
+        {
+            return new LEmergencia().Obtener_emergencias_sinAtender();
+        }
+        //
+        [Authorize]
+        [HttpGet]
+        [Route("api/Usuarios/GetObtener_mis_emergencias_entidad")]
+        public List<UEmergencia> Obtener_mis_emergencias_entidad(int identidad)
+        {
+            return new LEmergencia().Obtener_mis_emergencias_entidad(identidad);
+        }
+        //
+        [Authorize]
+        [HttpGet]
+        [Route("api/Usuarios/GetObtener_mis_emergencias_usuario")]
+        public List<UEmergencia> Obtener_mis_emergencias_usuario(int idusuario)
+        {
+            return new LEmergencia().Obtener_mis_emergencias_usuario(idusuario);
+        }
         //
         [Authorize]
         [HttpPost]
@@ -26,7 +58,7 @@ namespace infocast.Controllers{
                 emer.Id = int.Parse(Vs_entrada["id_emergencia"].ToString());
                 emer.Id_entidad= int.Parse(Vs_entrada["id_entidad"].ToString());
                 emer.Estado_emergencia = 2;
-                emer.Id_entidad= int.Parse(Vs_entrada["id_entidad"].ToString());
+                //emer.Id_entidad= int.Parse(Vs_entrada["id_entidad"].ToString());
                 if (emer == null){
                     return BadRequest("Alguna de las variables requeridas viene vacia o null, intentelo de nuevo");
                 } else{
