@@ -36,6 +36,5 @@ E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\bin\De
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\bin\Debug\System.ValueTuple.xml
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\obj\Debug\Data.csproj.AssemblyReference.cache
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
-E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\obj\Debug\Data.csproj.CopyComplete
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\obj\Debug\Data.dll
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\Data\obj\Debug\Data.pdb

@@ -61,12 +61,12 @@ namespace Data{
         {
             using(var db = new Mapeo())
             {
-                return new Mapeo().emergencia.Where(x => x.Estado_emergencia == 2 && x.Id_entidad == identidad).ToList();
+                return new Mapeo().emergencia.Where(x => x.Estado_emergencia >= 2 && x.Id_entidad == identidad).ToList();
             }
         }
         public List<UEmergencia> Obtener_mis_emergencias_usuario(int idusuario)
         {
-            return new Mapeo().emergencia.Where(x => x.Estado_emergencia == 2 && x.Usuario_reporta == idusuario).ToList();
+            return new Mapeo().emergencia.Where(x => x.Usuario_reporta == idusuario).ToList();
         }
         //
         public void Comentario_emergencia_usuario(UEmergencia emergencia){

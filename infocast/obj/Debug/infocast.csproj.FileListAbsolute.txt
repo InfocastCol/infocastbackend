@@ -161,3 +161,4 @@ E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\infocast\ob
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\infocast\obj\Debug\infocast.csproj.CoreCompileInputs.cache
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\infocast\obj\Debug\infocast.dll
 E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\infocast\obj\Debug\infocast.pdb
+E:\Ozuna\UdeC\Ingenieria de Software 2\infocast full\infocastbackend\infocast\obj\Debug\infocast.csproj.CopyComplete
